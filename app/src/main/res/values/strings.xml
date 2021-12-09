@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProjetRayon</string>
+    <string name="students">Etudiant</string>
+    <string name="products_menu">Rayon</string>
 </resources>
