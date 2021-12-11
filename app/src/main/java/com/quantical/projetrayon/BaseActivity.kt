@@ -1,4 +1,4 @@
-package fr.epsi.epsig2
+package com.quantical.projetrayon
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.quantical.projetrayon.R
 
 open class BaseActivity : AppCompatActivity() {
 
