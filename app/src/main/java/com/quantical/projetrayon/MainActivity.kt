@@ -17,7 +17,7 @@ class MainActivity : BaseActivity() {
             startActivity(newIntent)
         })
         buttonRayon.setOnClickListener(View.OnClickListener {
-            val newIntent= Intent(application,StudentActivity::class.java)
+            val newIntent= Intent(application,RayonActivity::class.java)
             startActivity(newIntent)
         })
 
