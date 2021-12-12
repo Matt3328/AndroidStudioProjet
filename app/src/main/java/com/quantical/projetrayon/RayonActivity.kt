@@ -1,8 +1,11 @@
 package com.quantical.projetrayon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.*
@@ -44,8 +47,8 @@ class RayonActivity : BaseActivity() {
                         val title =jsStudent.optString("title","")
                         val category_id =jsStudent.optString("category_id","")
                         val product_irl =jsStudent.optString("product_url","")
-                        val student = Rayon(category_id, title, product_irl)
-                        Rayons.add(student)
+                        val rayon = Rayon(category_id, title, product_irl)
+                        Rayons.add(rayon)
                     }
                     runOnUiThread(Runnable {
                         RayonAdapter.notifyDataSetChanged()
