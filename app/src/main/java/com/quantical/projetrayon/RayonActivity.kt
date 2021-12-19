@@ -19,7 +19,7 @@ class RayonActivity : BaseActivity() {
         showBtnBack()
         setHeaderTitle("Rayon")
         val Rayons = arrayListOf<Rayon>()
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewStudents)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewRayon)
         recyclerView.layoutManager = LinearLayoutManager(this)
         val RayonAdapter = RayonAdapter(Rayons)
         recyclerView.adapter = RayonAdapter
@@ -43,10 +43,10 @@ class RayonActivity : BaseActivity() {
                     val jsOb= JSONObject(data)
                     val jsArray =jsOb.getJSONArray("items")
                     for(i in 0 until jsArray.length()){
-                        val jsStudent = jsArray.getJSONObject(i)
-                        val title =jsStudent.optString("title","")
-                        val category_id =jsStudent.optString("category_id","")
-                        val products_url =jsStudent.optString("products_url","")
+                        val jsRayon = jsArray.getJSONObject(i)
+                        val title =jsRayon.optString("title","")
+                        val category_id =jsRayon.optString("category_id","")
+                        val products_url =jsRayon.optString("products_url","")
                         val rayon = Rayon(category_id, title, products_url)
                         Rayons.add(rayon)
                     }
