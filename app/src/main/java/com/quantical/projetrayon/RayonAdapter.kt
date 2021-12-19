@@ -30,8 +30,8 @@ class RayonAdapter (private val Rayons: ArrayList<Rayon>): RecyclerView.Adapter<
         holder.buttonProduit.setOnClickListener(View.OnClickListener {
             val context= holder.buttonProduit.context
             val newIntent= Intent(context,ProduitActivity::class.java)
-            newIntent.putExtra("id", rayon.category_id)
-            newIntent.putExtra("product_irl", rayon.product_url)
+            newIntent.putExtra("title", rayon.title)
+            newIntent.putExtra("products_url", rayon.products_url)
             context.startActivity(newIntent)
         })
     }

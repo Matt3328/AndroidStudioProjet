@@ -46,8 +46,8 @@ class RayonActivity : BaseActivity() {
                         val jsStudent = jsArray.getJSONObject(i)
                         val title =jsStudent.optString("title","")
                         val category_id =jsStudent.optString("category_id","")
-                        val product_irl =jsStudent.optString("product_url","")
-                        val rayon = Rayon(category_id, title, product_irl)
+                        val products_url =jsStudent.optString("products_url","")
+                        val rayon = Rayon(category_id, title, products_url)
                         Rayons.add(rayon)
                     }
                     runOnUiThread(Runnable {
